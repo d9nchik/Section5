@@ -7,7 +7,9 @@ public class exercise44 {
         System.out.print("Enter an integer: ");
         byte decimal = input.nextByte();
 
-        String s1 = String.format("%8s", Integer.toBinaryString(decimal & 0xFF)).replace(' ', '0');
-        System.out.println(s1);
+        System.out.print("The 8 bits are ");
+        for (byte i = 7; i >=0  ; i--) {
+            System.out.print((byte)((byte) 1 & (decimal>>i)));
+        }
     }
 }
